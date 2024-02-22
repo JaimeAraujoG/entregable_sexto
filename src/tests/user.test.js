@@ -22,9 +22,9 @@ beforeAll(async () => {
         .post(`${URL_BASE}/login`)
         .send(user)
 
-    console.log(res.body);
+   // console.log(res.body);
     TOKEN = res.body.token
-    console.log(TOKEN);
+   // console.log(TOKEN);
 })
 
 test("GET -> 'URL_BASE', should return status code 200, res.body to be defined abd res.body.length === 1 ", async () => {
