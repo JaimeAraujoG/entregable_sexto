@@ -13,7 +13,6 @@ const create = catchError(async(req, res) => {
     return res.status(201).json(result);
 });
 
-
 const remove = catchError(async(req, res) => {
     const { id } = req.params;
     const result = await User.destroy({ where: {id} });
@@ -34,6 +33,7 @@ const update = catchError(async(req, res) => {
     if(result[0] === 0) return res.sendStatus(404);
     return res.json(result[1][0]);
 });
+
 const login = catchError(async (req, res) => {
     const { email, password }= req.body
 
@@ -52,11 +52,6 @@ const login = catchError(async (req, res) => {
     return res.json({user, token})
     
 })
-
-
-
-
-
 
 module.exports = {
     getAll,

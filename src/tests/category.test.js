@@ -36,7 +36,7 @@ test("POST -> 'URL_BASE', should return status code 201, res.body to be defined 
 
 })
 
-test("GET -> 'URL_BASE/categories', should return status code 200, res. body to be defined and res.body to have length ===1", async () => {
+test("GET -> 'URL_BASE', should return status code 200, res. body to be defined and res.body to have length ===1", async () => {
     const res = await request(app)
     .get(URL_BASE)
 
