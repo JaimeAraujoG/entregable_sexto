@@ -9,7 +9,6 @@ const getAll = catchError(async (req, res) => {
     return res.json(result)
 })
 
-
 const create = catchError(async (req, res) => {
     const {filename} = req.file
    // console.log(filename);
