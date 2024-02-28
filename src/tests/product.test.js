@@ -79,8 +79,7 @@ test("GET -> 'URL_BASE', should status coode 200, res.body to be defined, and re
 test("GET -> 'URL_BASE/:productId', should return status code 200, res.body to be defined, res.body.title === product.title, res.body.category.id to be defined, and res.body.category.id === category.id", async () => {
     const res = await request(app)
       .get(`${URL_BASE}/${productId}`)
-      console.log(res.body);
-   
+    
     expect(res.status).toBe(200)
     expect(res.body).toBeDefined()
     expect(res.body.title).toBe(product.title)
