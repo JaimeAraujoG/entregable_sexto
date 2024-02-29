@@ -62,7 +62,8 @@ test("GET -> 'URL_PURCHASE', should return status code 200, res.body to be defin
     expect(res.body[0].productId).toBeDefined()
     expect(res.body[0].productId).toBe(product.id)
 
-    expect(res.body[0].productId).toBeDefined()
-    expect(res.body[0].productId).toBe(userId)
+    expect(res.body[0].userId).toBeDefined()
+    expect(res.body[0].userId).toBe(userId)
+
     await product.destroy()
 }) 
